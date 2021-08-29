@@ -20,7 +20,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         int choose = in.nextInt();
-        in.close();
 
         switch (choose) {
             case 1:
