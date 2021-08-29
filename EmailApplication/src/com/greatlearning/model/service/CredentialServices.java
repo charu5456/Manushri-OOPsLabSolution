@@ -4,12 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class CredentialServices {
-
-    public String generateEmailAddress(String firstname, String lastname, String department) {
-        String em =  firstname.toLowerCase() + lastname.toLowerCase() +  department + "@" + "." + "company.com";
-        return em;
-    }
-
+    
     public static String generatePassword(int len)
     {
         String ch = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()<>/";
@@ -20,6 +15,12 @@ public class CredentialServices {
             sb.append(ch.charAt(rnd.nextInt(ch.length())));
         return sb.toString();
     }
+
+    public String generateEmailAddress(String firstname, String lastname, String department) {
+        String em =  firstname.toLowerCase() + lastname.toLowerCase() +  department + "@" + "." + "company.com";
+        return em;
+    }
+
     public void showCredentials(Employee employee)
     {
         System.out.println("Dear "+ employee.getFirstname()+" your generated credentials are as follows");
